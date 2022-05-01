@@ -14,12 +14,12 @@ module.exports = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: { chainId: 1337 },
-    // rinkeby: {
-    //   url: process.env.URL_RINKEBY,
-    //   accounts: {
-    //     mnemonic: process.env.MNEMONIC,
-    //   },
-    // },
+    rinkeby: {
+      url: process.env.URL_RINKEBY,
+      accounts: {
+        mnemonic: process.env.MNEMONIC,
+      },
+    },
     // mainnet: {
     //   url: process.env.URL_MAINNET,
     //   accounts: {

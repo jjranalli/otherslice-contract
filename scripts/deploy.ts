@@ -3,13 +3,15 @@ import addresses from "../addresses.json"
 
 // Set these before proceeding
 const env = "testnet"
-const slicerId = 1 // The ID of the slicer that will be able to interact with this contract
+const slicerId = 19 // The ID of the slicer that will be able to interact with this contract
 
 async function main() {
   console.log("deploying")
 
-  const CONTRACT = await ethers.getContractFactory("MyContract")
+  const CONTRACT = await ethers.getContractFactory("OtherSlice")
   const contract = await CONTRACT.deploy(
+    "OtherSlice",
+    "OTHERSLICE",
     addresses[env]["ProductsModule"],
     slicerId
   )
